@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculadora.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <a href="index.html">Home</a>
+    <div class="btn--dark">
+    </div>
+      <form class="calculator" name="calc">
+        <input type="text" name="val" readonly="" class="txt"/>
+        <input type="button" value = 'c' class="btn clear" onclick="document.calc.val.value = ''">
+        <input type="button" value = '*' class="btn" onclick="document.calc.val.value += '*'">
+        <input type="button" value = '/' class="btn" onclick="document.calc.val.value += '/'">
+        <input type="button" value = '7' class="btn" onclick="document.calc.val.value += '7'">
+        <input type="button" value = '8' class="btn" onclick="document.calc.val.value += '8'">
+        <input type="button" value = '9' class="btn" onclick="document.calc.val.value += '9'">
+        <input type="button" value = '-' class="btn" onclick="document.calc.val.value += '-'">
+        <input type="button" value = '4' class="btn" onclick="document.calc.val.value += '4'">
+        <input type="button" value = '5' class="btn" onclick="document.calc.val.value += '5'">
+        <input type="button" value = '6' class="btn" onclick="document.calc.val.value += '6'">
+        <input type="button" value = '+' class="btn plus" onclick="document.calc.val.value += '+'">
+        <input type="button" value = '3' class="btn" onclick="document.calc.val.value += '3'">
+        <input type="button" value = '2' class="btn" onclick="document.calc.val.value += '2'">
+        <input type="button" value = '1' class="btn" onclick="document.calc.val.value += '1'">
+        <input type="button" value = '0' class="btn" onclick="document.calc.val.value += '0'">
+        <input type="button" value = '00' class="btn" onclick="document.calc.val.value += '00'">
+        <input type="button" value = '.' class="btn" onclick="document.calc.val.value += '.'">
+        <input type="button" value = '=' class="btn" onclick="document.calc.val.value = eval(calc.val.value)">
+    </form>
+    
+
+    <script>
+      const el1 = document.querySelector('.calculator');
+      const btnDark = document.querySelector('.btn--dark');
+      btnDark.addEventListener('click' ,function() {
+        if(el1.classList.contains('dark')) {
+          el1.classList.remove('dark');
+          this.classList.remove('btn--light');
+          document.querySelector('body').style.background = '#dde1e7';
+        }
+        else {
+          el1.classList.add('dark');
+          this.classList.add('btn--light')
+          document.querySelector('body').style.background = '#272727';
+        }
+      })
+    </script>
+
+
+
+
+
+  
+
+  </body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Ubuntu' , sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dde1e7;
+    transition: all .3s linear;
+  }
+  .btn--dark {
+    height: 20px;
+    width: 40px;
+    background-color: #5372FE;
+    border-radius: 50px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .btn--dark:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: black;
+    transition: all .3s linear;
+  }
+  .btn--light:after {
+    background-color: #fff;
+    transform: translateX(20px);
+  }
+  .calculator {
+    width: 320px;
+    height: 450px;
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,auto);
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #ffffff73 ,2px 2px 3px rgba(94,104,121,0.288);
+  }
+  .txt{
+    grid-column: 1/5;
+    padding: 5px;
+    font-size: 20px;
+    color:#000;
+    text-align: right;
+    outline: none;
+    border: none;
+    background: #dde1e7;
+    box-shadow:-3px -3px 7px #ffffff73 inset ,2px 2px 3px rgba(94,104,121,0.288) inset;
+    
+  }
+  .btn {
+    display: grid;
+    place-items: center;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73 ,2px 2px 3px rgba(94,104,121,0.288);
+  }
+  .clear {
+    grid-column: 1/3;
+  }
+  .plus{
+    grid-column: 4/5;
+    grid-row: 4/6;
+  }
+  .btn:focus{
+    box-shadow:-3px -3px 7px #ffffff73 inset ,2px 2px 3px rgba(94,104,121,0.288) inset;
+  }
+  .dark {
+    box-shadow:  inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
+  }
+  .dark .txt {
+    color: #fff;
+    background: #272727;
+    box-shadow:  inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
+  }
+  .dark .btn {
+    color: #5372FE;
+    background: #272727;
+    box-shadow:   2px 2px 5px #141414, -5px -5px 10px #212121;
+  }
+  .dark .btn:focus {
+    box-shadow:  inset 2px 2px 5px #141414, inset -5px -5px 10px #212121;
+  }
+  
+  a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #272727;
+    border-radius: 9px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+  }
